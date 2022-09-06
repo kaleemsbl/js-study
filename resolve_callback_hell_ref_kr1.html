@@ -1,0 +1,119 @@
+<script>
+  function kaleem1() {
+    return new Promise((resolve, reject) => {
+      setTimeout(function () {
+
+        console.log("kaleem!");
+
+        resolve();
+      }, 3000);
+    });
+  }
+
+  function khan1() {
+    return new Promise((resolve, reject) => {
+      setTimeout(function () {
+        console.log("khan!");
+        resolve();
+      }, 2000);
+    });
+  }
+
+  function add() {
+    return new Promise((resolve, reject) => {
+      setTimeout(function () {
+        console.log("Said Nagli!");
+        resolve();
+      }, 1000);
+    });
+  }
+
+  function tehseel() {
+    return new Promise((resolve, reject) => {
+      setTimeout(function () {
+        console.log("Hasanpur!");
+        resolve();
+      }, 900);
+    });
+  }
+
+  function dist() {
+    return new Promise((resolve, reject) => {
+
+      setTimeout(function () {
+
+        console.log("Amroha!");
+        // getting code from database
+        let error = false;
+        if (error) {
+          reject("There is error occured!");
+        } else {
+          resolve();
+        }
+
+      }, 800);
+
+    });
+  }
+
+  function printName() {
+    console.log("Good Morning");
+  }
+
+
+
+//   kaleem1(function () {
+//     khan1(function () {
+//       add(function () {
+//         tehseel(function () {
+//           dist(function () {
+//             printName();
+//           });
+//         });
+//       });
+//     });
+//   });
+
+
+//   kaleem1().then(res => {
+//     khan1().then(r => {
+//         add().then(result => {
+//             tehseel().then(resul => {
+//                 dist().then(rr => {
+//                     printName();
+//                 })
+//             })
+//         })
+//     })
+//   });
+
+
+//   kaleem1().then(async (res) => {
+//     await khan1();
+//     await add();
+//     await tehseel();
+//     await dist();
+//     printName();
+//   });
+
+
+  var display = async () => {
+    
+    try {
+        await kaleem1();
+        await khan1();
+        await add();
+        await tehseel();
+        await dist();
+        printName();
+    } catch (error) {
+        alert(error);
+    }
+
+  }
+  
+
+  display();
+
+
+</script>

@@ -1,0 +1,15 @@
+<script>
+    const getUserData = {
+        fname: "Kaleem",
+        lname: "Khan"
+    }
+
+    getUserData.__proto__.address = "Ashrafpur";
+
+    getUserData.__proto__.getFulldata = function() {
+        return this.fname + " " + this.lname;
+    }
+
+    console.log(getUserData.address);
+    console.log(getUserData.getFulldata());
+</script>

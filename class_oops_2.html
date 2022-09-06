@@ -1,0 +1,62 @@
+<script>
+    class Person {
+        constructor() {
+            this.userData = {
+                id: 1,
+                name: "shakeel",
+                addres: "sambhal",
+            };
+
+            this.accessoriesData = {
+                mobile: {
+                    brand: "Samsung"
+                },
+                car: {
+                    brand: "BMW",
+                    model: "UV6"
+                },
+                bike: {
+                    brand: "Hero"
+                }
+            }
+        }
+
+        getUser() {
+            return this.userData;
+        }
+
+        getUserAccessories() {
+            return this.accessoriesData;
+        }
+
+        checkAccessories(isExist) {
+            const data = this.accessoriesData;
+            let foundData;
+
+            for(const item in data) {
+                if (item == isExist) {
+                    foundData = data[item];
+                    break;
+                } else {
+                    foundData = "Not found";
+                }
+            }
+
+            return foundData;
+        }
+
+    }
+
+    const pObj = new Person(); // Instance Creation, BluePrint of Class object, Object of Classs
+
+    const userInfo = pObj.getUser();
+    console.log(userInfo.name);
+
+    const userAccess = pObj.getUserAccessories();
+    console.log(userAccess);
+
+    const result = pObj.checkAccessories("mobile");
+    console.log(result);
+
+    
+</script>

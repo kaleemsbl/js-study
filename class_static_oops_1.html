@@ -1,0 +1,34 @@
+<script>
+    class Person {
+        constructor() {
+            this.username = "Kaleem",
+            this.mobile = "9876543210",
+            this.address = "Ashrafpur"
+        }
+
+        static getUserBasicInfo() {
+            const data = {
+                name: this.username,
+                mobile: this.mobile,
+                address: this.address
+            }
+            return data;
+        }
+
+        static getName() {
+            return "Shakeel Ahamed";
+        }
+    }
+
+    // const getData = new Person();
+
+    // const userInfo = getData.getUserBasicInfo();
+    // console.log(userInfo);
+
+
+    const uname = Person.getName();
+    console.log(uname);
+
+    
+
+</script>

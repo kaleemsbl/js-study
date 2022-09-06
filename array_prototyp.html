@@ -1,0 +1,28 @@
+<script>
+
+    Array.prototype.multiplyOfArray = function(multiplyer) {
+        let bucket = [];
+        this.forEach(element => {
+            let result = element * multiplyer;
+            bucket.push(result);
+        });
+
+        return bucket;
+    }
+
+
+    const data = [2, 6, 9];
+
+    console.log( data.multiplyOfArray(2) );
+
+
+    // forEach
+    // map
+    // filter
+    // find
+    // reduce
+    // every
+    // entries
+    // etc
+
+</script>

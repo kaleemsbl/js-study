@@ -1,0 +1,16 @@
+<script>
+    function sum(...data) {
+        console.log(data);
+
+        var sum = 0;
+        data.forEach(element => {
+            sum = sum + element 
+        });
+
+        return sum;
+    }
+
+    var result = sum(20, 25, 10, 30, 50, 100);
+
+    document.write(result);
+</script>

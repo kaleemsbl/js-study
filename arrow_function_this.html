@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html>
+  <body>
+ 
+    <button id="btn">Click Me!</button>
+
+  </body>
+</html>
+
+<script>
+
+
+    // var hello = function () {
+    //   console.log(this);
+    // };
+
+    var hello = () => {
+      console.log(this); 
+    };
+
+    //The window object calls the function:
+    window.addEventListener("load", hello);
+
+    //A button object calls the function:
+    document.getElementById("btn").addEventListener("click", hello);
+
+</script>

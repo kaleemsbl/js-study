@@ -1,0 +1,26 @@
+<script>
+
+    var userInfo = (callback) => {
+
+        // setTimeout(function() {
+        //     callback({ n1: 20, n2: 30 });
+        // }, 1000);
+
+        setTimeout(() => callback({ n1: 20, n2: 30 }), 1000);
+    }
+
+    var printData = () => {
+
+        // userInfo(function(data) {
+        //     const sum = data.n1 + data.n2;
+        //     console.log("The sum is = ", sum);
+        // });
+
+        userInfo(data => console.log("The sum is = ", data.n1 + data.n2) );
+    }
+
+ 
+    printData();
+
+
+</script>

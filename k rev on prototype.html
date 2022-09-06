@@ -1,0 +1,22 @@
+<script>
+function arrayMultiply(arrayofData, multiplyer) {
+    let bucket = [];
+    arrayofData.forEach(element => {
+        let result = element * multiplyer;
+        bucket.push(result);
+    });
+
+    return bucket;
+}
+
+var data = [2, 6, 9];
+
+var output = arrayMultiply(data, 2);
+console.log(output);
+
+
+var op = data.map(el => el * 2);
+
+console.log(op);
+</script>
+</script>

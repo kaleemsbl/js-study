@@ -1,0 +1,21 @@
+<script>
+    function printNameFirst(fullName, callback) {
+        // asynchornous
+        setTimeout(() => {
+
+            console.log(fullName);
+
+            callback();
+
+        }, 1000);
+
+    }
+
+    // function printAgeSecond() {
+    //     console.log("27");
+    // }
+
+    printNameFirst("Kaleem Khan", function() {
+        console.log("27");
+    });
+</script>

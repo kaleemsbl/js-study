@@ -1,0 +1,30 @@
+<script>
+
+    function userInfo(callback) {
+
+        setTimeout(function() {
+            console.log("Hello World!");
+            callback();
+        }, 2000);
+    }
+
+    function user(callback) {
+
+        setTimeout(function() {
+            console.log("Hello User!");
+            callback();
+        }, 1000);
+    }
+    
+function printName() {
+        console.log("Good Morning");
+    }
+
+    userInfo(function() {
+        user(function() {
+            printName();
+    })
+    });
+
+
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .parent {
+            width: 20%;
+            margin: 0 auto;
+        }
+        .form-control {
+            margin-top: 10px;
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+        .input-form {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 3px;
+            padding: 14px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+        .form-control button {
+            width: 100%;
+            height: 35px;
+            background: blue;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid blue;
+        }
+        .form-control button:hover {
+            cursor: pointer;
+            background: rgb(9, 9, 76);
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="form-control">
+            <input id="userName" class="input-form" type="text" placeholder="Enter GitHub Username">
+        </div>
+        <div class="form-control">
+            <button onclick="getData()">Get Data</button>
+        </div>
+        <div class="form-control">
+            <span id="display"></span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const getData = async () => {
+        // GET, POST, DELET, PATCh, PUT
+        // axios.get("https://api.github.com/users/sakmbd").then(response => {
+        //     console.log(response);
+        // }).catch(e => {
+        //     console.log("Error - ", e);
+        // });
+
+        try {
+            // getting input value
+            var username = document.querySelector("#userName").value;
+
+            // making get http request to the server to get result
+            var response = await axios.get(`https://api.github.com/users/${username}`);
+            console.log(response.data);
+
+            // Displying result on HTML page
+            document.querySelector("#display").innerHTML = `
+                <h1>${response.data.name}</h1>
+                <i>${response.data.bio}</i>
+                <br><br>
+                <code>${JSON.stringify(response.data)}</code>
+            `;
+            
+        } catch (e) {
+            console.log(e.message);
+
+            // Displying error
+            document.querySelector("#display").innerHTML = `<h3 class='error'>${e.message}</h3>`
+        }
+
+    }
+</script>

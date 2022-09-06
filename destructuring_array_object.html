@@ -1,0 +1,23 @@
+<script>
+    var object = {
+        id: 5,
+        firstName: "Shakeel",
+        lastName: "Ahamed",
+        age: 32,
+        getFullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+
+    // var firstName = object.firstName;
+    // var lastName = object.lastName;
+    // var age = object.age;
+
+    var { firstName, lastName, getFullName } = object;
+
+
+    console.log( firstName );
+
+
+    
+</script>

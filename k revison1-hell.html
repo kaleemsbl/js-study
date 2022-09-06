@@ -1,0 +1,52 @@
+<script>
+  function kaleem1(callback) {
+    setTimeout(function () {
+      console.log("kaleem!");
+      callback();
+    }, 3000);
+  }
+
+  function khan1(callback) {
+    setTimeout(function () {
+      console.log("khan!");
+      callback();
+    }, 2000);
+  }
+
+  function add(callback) {
+    setTimeout(function () {
+      console.log("Said Nagli!");
+      callback();
+    }, 1000);
+  }
+
+  function tehseel(callback) {
+    setTimeout(function () {
+      console.log("Hasanpur!");
+      callback();
+    }, 900);
+  }
+
+  function dist(callback) {
+    setTimeout(function () {
+      console.log("Amroha!");
+      callback();
+    }, 800);
+  }
+  
+  function printName() {
+    console.log("Good Morning");
+  }
+
+  kaleem1(function () {
+    khan1(function () {
+      add(function () {
+        tehseel(function () {
+          dist(function () {
+            printName();
+          });
+        });
+      });
+    });
+  });
+</script>

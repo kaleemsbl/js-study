@@ -1,0 +1,51 @@
+<script>
+    class Person {
+        constructor() {
+            this.username = "Kaleem",
+            this.mobile = "9876543210",
+            this.address = "Ashrafpur"
+        }
+
+        getUserBasicInfo() {
+            const data = {
+                name: this.username,
+                mobile: this.mobile,
+                address: this.address
+            }
+            return data;
+        }
+    }
+
+    class PersonAccressories {
+        constructor() {
+            this.bike = "Apache";
+            this.headphone = "Boat";
+        }
+
+        getPersonAccess() {
+            return {
+                motorbike: this.bike,
+                earphone: this.headphone
+            }
+        }
+
+        getPersonFullInfo() {
+            const parentClassObject = new Person();
+            return {
+                basicInfo: parentClassObject.getUserBasicInfo(),
+                accessories: this.getPersonAccess()
+            }
+        }
+    }
+
+
+    const UserAccess = new PersonAccressories();
+
+    const userData = UserAccess.getPersonFullInfo();
+
+    console.log(userData);
+
+
+    
+
+</script>

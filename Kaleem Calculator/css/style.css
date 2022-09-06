@@ -1,0 +1,85 @@
+body {
+    background-image: url("/images/body.png");
+}
+.clc-container {
+    width: 15%;
+    margin: 40px auto;
+    border: 2px dotted green;
+    padding: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.form-control {
+    margin-top: 20px;
+}
+
+.input-control {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0d6efd;
+}
+
+input { 
+    text-align: right; 
+}
+
+.form-control button {
+    width: 38px;
+    height: 40px;
+    margin: 2px 0px 2px 2px;
+    color: white;
+    font-size: 28px;
+}
+
+.form-control .plus-btn {
+    background: #0d6efd;
+    border: 1px solid #0d6efd;
+    border-radius: 5px;
+}
+
+.form-control .minus-btn {
+    background: #ffc107;
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+}
+
+.form-control .multiply-btn {
+    background: #6c757d;
+    border: 1px solid #6c757d;
+    border-radius: 5px;
+}
+
+.form-control .devide-btn {
+    background: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 5px;
+}
+
+.form-control .equal-btn {
+    background: #198754;
+    border: 1px solid #198754;
+    border-radius: 5px;
+}
+
+
+.form-control button:hover {
+    cursor: pointer;
+    background: #8d7373;
+}
+
+.active {
+    background-color: black;
+    border-color: black;
+}
+
+.form-control button:active {
+    background-color: black;
+    border-color: black;
+}
+
+@media screen and (max-width: 480px) {
+    .input-control {
+        width: 80%;
+    }
+}

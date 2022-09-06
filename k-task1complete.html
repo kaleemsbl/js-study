@@ -1,0 +1,15 @@
+<script>
+    Array.prototype.multiplyOfArray = function (multiplyer) {
+        let bucket = [];
+        this.forEach((element) => {
+            let result = element * multiplyer;
+            bucket.push(result);
+        });
+
+        return bucket;
+    };
+ 
+    let data = [10, 20, 10, 30, 40, 10, 20];
+    let Uniquedata = [...new Set(data)];
+    console.log(Uniquedata.multiplyOfArray(2));
+</script>

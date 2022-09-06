@@ -1,0 +1,65 @@
+<script>
+    // function getUser() {
+    // }
+
+    // var getUser = () => {
+    // }
+
+    class Person {
+
+        getUser() {
+            const data = {
+                id: 1,
+                name: "shakeel",
+                addres: "sambhal",
+            };
+
+            return data;
+        }
+
+        getUserAccessories() {
+            return {
+                mobile: {
+                    brand: "Samsung"
+                },
+                car: {
+                    brand: "BMW",
+                    model: "UV6"
+                },
+                bike: {
+                    brand: "Hero"
+                }
+            }
+        }
+
+        checkAccessories(isExist) {
+            const data = this.getUserAccessories();
+            let foundData;
+
+            for(const item in data) {
+                if (item == isExist) {
+                    foundData = data[item];
+                    break;
+                } else {
+                    foundData = "Not found";
+                }
+            }
+
+            return foundData;
+        }
+
+    }
+
+    const pObj = new Person(); // Instance Creation, BluePrint of Class object, Object of Classs
+
+    const userInfo = pObj.getUser();
+    console.log(userInfo.name);
+
+    const userAccess = pObj.getUserAccessories();
+    console.log(userAccess);
+
+    const result = pObj.checkAccessories("tv");
+    console.log(result);
+
+    
+</script>

@@ -1,0 +1,15 @@
+<script>
+    function GetUserData() {
+        this.fname = "Kaleem";
+        this.lname = "Khan";
+    }
+
+    GetUserData.prototype.address = "Ashrafpur";
+
+    GetUserData.prototype.getFullName = function() {
+        return this.fname + " " + this.lname;
+    }
+
+    const data = new GetUserData();
+    console.log(data.getFullName());
+</script>

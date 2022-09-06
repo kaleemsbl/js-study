@@ -1,0 +1,37 @@
+<script>
+    /*
+    function printNameFirst(callback) {
+        // asynchornous
+        setTimeout(() => {
+            console.log("Kaleem");
+            callback();
+        }, 1000);
+
+    }
+
+    function printAgeSecond() {
+        console.log("27");
+    }
+
+    printNameFirst();
+    printAgeSecond();
+    */
+
+    function printNameFirst(callback) {
+        // asynchornous
+        setTimeout(() => {
+            console.log("Kaleem");
+            // your all code then callback
+            callback();
+        }, 1000);
+
+    }
+
+    function printAgeSecond() {
+        console.log("27");
+    }
+
+    printNameFirst(printAgeSecond);
+
+
+</script>

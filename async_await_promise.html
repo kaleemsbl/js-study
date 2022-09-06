@@ -1,0 +1,30 @@
+<script>
+    function getUserInfo() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // our code
+                resolve("Hello Word");
+            }, 2000);
+        });
+    }
+
+    function user() {
+        return "User Data";
+    }
+
+    // Debugging 
+    console.log(getUserInfo());
+    console.log( user() );
+    console.log("+++++++Debugging End++++++++++");
+    // End of debugging
+
+
+    async function show() {
+       var data = await getUserInfo();
+       console.log(data);
+
+       console.log( user() );
+    }
+
+    show();
+</script>

@@ -1,0 +1,36 @@
+<script>
+    // spread opertor example
+    var arrayData = [2, 10, 20, 5, 2, 20, 10, 6, 8, 10, 6, 50];
+    console.log("arrayData - ", arrayData);
+
+    // Requirement is we need to copy above arrayData to in new variable but without affecting arrayData or without having arrayData refrence
+    var newCopyData = arrayData; // copy is fine but having arrayData refrence i.e problem
+    newCopyData.push("World");
+    console.log(newCopyData);
+
+
+    /* Below are example to copy array data into new variable witout having arrayData link */
+
+    // Example -1 Copy above arrayData in new var by stringiFy to unlink refrence
+    var newData1 = JSON.stringify(arrayData);
+    newData1 = JSON.parse(newData1);
+    newData1.push("Test");
+    console.log(newData1);
+
+
+    // Example -2 Copy above arrayData in new var by stringiFy to unlink refrence
+    var newData = [];
+    arrayData.forEach(el => newData.push(el));
+    newData.push("shakeel")
+    console.log(newData);
+
+
+    // Best way to copy array or object without refrence by spread operator
+    var copyData = [...arrayData];
+    copyData.push("Hello");
+    console.log("copyData - ", copyData);
+
+
+
+
+</script>
